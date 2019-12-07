@@ -13,19 +13,23 @@ export class SearchComponent implements OnInit {
 
   songTitle: string;
   songs: Song[];
-  errors: string[];
+  error: string;
 
   ngOnInit() {}
 
   searchSong(searchValue): void {
+    this.songs = [];
+    this.error = null;
     if (!searchValue) {
-      this.errors.push(`something's wrong`);
+      this.error = 'something wrong! try again';
       console.log('noValue');
     } else {
       this.songService.findSong(searchValue).subscribe(songs => {
-        console.log(songs);
-        this.songs = songs;
-        console.log(this.songs, songs.length);
+        if (songs.length === 0) {
+          this.error = 'no result. try again';
+        } else {
+          this.songs = songs;
+        }
       });
       console.log(searchValue);
     }

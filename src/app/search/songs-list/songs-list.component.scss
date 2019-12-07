@@ -1,5 +1,37 @@
-.chords {
-  color: rgb(0, 47, 148);
-  font-weight: bold;
-  font-style: italic;
+.songs-list {
+  position: relative;
+  height: 60vh;
+  top: 40vh;
+  overflow-y: scroll;
+  padding: 2vh 25vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.7);
+  padding-top: 2vh;
+
+  &__item {
+    margin: 3vh 0;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    a {
+      color: rgb(71, 52, 0);
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 600;
+      &:hover {
+        padding-left: 2vw;
+      }
+    }
+  }
+
+  .chords {
+    font-style: italic;
+    background-color: rgb(71, 52, 0);
+    padding: 1vh;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: white;
+    margin-left: 2vw;
+  }
 }

@@ -1,11 +1,16 @@
-<form (ngSubmit)="searchSong(songTitle)" class="search__form">
-  <input
-    [(ngModel)]="songTitle"
-    type="text"
-    name="songTitle"
-    class="search__input"
-  />
-  <button>Search</button>
-</form>
+<app-nav> </app-nav>
 
-<app-songs-list [songs]="songs"></app-songs-list>
+<main class="main-search">
+  <form (ngSubmit)="searchSong(songTitle)" class="main-search__form">
+    <input
+      [(ngModel)]="songTitle"
+      type="text"
+      name="songTitle"
+      class="main-search__input"
+      placeholder="song or artist"
+    />
+    <button class="main-search__button">Search</button>
+  </form>
+
+  <app-songs-list [songs]="songs" [error]="error"></app-songs-list>
+</main>
