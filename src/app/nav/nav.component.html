@@ -1,0 +1,29 @@
+<nav>
+  <ul class="nav">
+    <li class="nav__item">
+      <a
+        class="nav__link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLinkActive]="'active'"
+        routerLink="/"
+        >Home</a
+      >
+    </li>
+    <li class="nav__item">
+      <a
+        class="nav__link"
+        [routerLinkActive]="'active'"
+        routerLink="/search-songs"
+        >Chords</a
+      >
+    </li>
+    <li class="nav__item">
+      <a
+        class="nav__link"
+        [routerLinkActive]="'active'"
+        routerLink="/search-chords"
+        >Songs</a
+      >
+    </li>
+  </ul>
+</nav>
