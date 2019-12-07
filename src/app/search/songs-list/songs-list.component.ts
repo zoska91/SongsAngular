@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SongsListComponent implements OnInit {
   @Input() songs: Song[];
+  @Input() error: string;
 
   constructor() {}
 

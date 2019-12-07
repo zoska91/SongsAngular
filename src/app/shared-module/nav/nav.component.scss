@@ -1,11 +1,17 @@
 .nav {
-  height: 15vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0;
-
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: arial;
+  box-shadow: 5px 0 10px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
   &__item {
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -17,7 +23,8 @@
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 1);
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 5px 0 10px 10px rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -38,8 +45,9 @@
   transition: 0.2s;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 0 10px 10px rgba(0, 0, 0, 0.2);
     color: white;
-    text-shadow: 2px 2px 2px grey;
+    text-shadow: 2px 2px 2px black;
   }
 }

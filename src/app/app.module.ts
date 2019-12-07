@@ -7,18 +7,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchModule } from './search/search.module';
 import { FormsModule } from '@angular/forms';
-import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
-import { ChordsComponent } from './chords/chords.component';
+import { ChordsModule } from './chords/chords.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, HomeComponent, ChordsComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SearchModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChordsModule,
+    HomeModule
   ],
   providers: [SongsService],
   bootstrap: [AppComponent]

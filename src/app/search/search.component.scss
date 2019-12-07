@@ -1,0 +1,52 @@
+.main-search {
+  height: 100vh;
+  background: url('../../assets//bg-song.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &__form {
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__input {
+    display: block;
+    height: 10vh;
+    width: 30vw;
+    font-size: 1.2rem;
+    padding: 2vh 3vw;
+    border: none;
+    border-bottom: 3px solid rgb(124, 95, 9);
+    background-color: transparent;
+    text-align: centerf;
+    &::-webkit-input-placeholder {
+      text-align: center;
+    }
+    &:-moz-placeholder {
+      text-align: center;
+    }
+    &::-moz-placeholder {
+      text-align: center;
+    }
+    &:-ms-input-placeholder {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 3vh;
+    width: 15vw;
+    height: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-left: 7.5vw;
+    color: rgb(80, 62, 7);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}
