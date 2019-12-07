@@ -1,3 +1,4 @@
+import { SongsListComponent } from './songs-list/songs-list.component';
 import {
   async,
   ComponentFixture,
@@ -9,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { SongsService } from './songs.service';
 
 import { SearchComponent } from './search.component';
-import { SearchSongComponent } from './search-song/search-song.component';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -18,7 +18,7 @@ describe('SearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [SearchComponent, SearchSongComponent],
+      declarations: [SearchComponent],
       providers: [
         {
           provide: SongsService,

@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
       this.songService.findSong(searchValue).subscribe(songs => {
         console.log(songs);
         this.songs = songs;
-        console.log(this.songs);
+        console.log(this.songs, songs.length);
       });
       console.log(searchValue);
     }

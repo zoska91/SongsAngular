@@ -1,0 +1,13 @@
+<h2 *ngIf="songs">List songs</h2>
+
+<ul class="songs-list">
+  <li *ngFor="let song of songs">
+    <a
+      href="http://www.songsterr.com/a/wa/song?id={{ song.id }}"
+      target="_blank"
+    >
+      <span>{{ song.title }} - {{ song.artist.name }}</span>
+      <span class="chords" *ngIf="song.chordsPresent"> [chords]</span>
+    </a>
+  </li>
+</ul>

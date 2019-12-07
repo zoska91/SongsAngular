@@ -11,7 +11,7 @@ export class SongsService {
 
   constructor(private http: HttpClient) {}
 
-  findSong(value): Observable<Song[]> {
+  findSong(value: string): Observable<Song[]> {
     const url = `${this.API}a/ra/songs.json?pattern=${value}`;
     return this.http
       .get<Song[]>(url)

@@ -6,13 +6,12 @@ import { SongsService } from './search/songs.service';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import { SearchSongComponent } from './search/search-song/search-song.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, FormsModule],
-      declarations: [AppComponent, SearchComponent, SearchSongComponent],
+      declarations: [AppComponent, SearchComponent],
       providers: [
         {
           provide: SongsService,
