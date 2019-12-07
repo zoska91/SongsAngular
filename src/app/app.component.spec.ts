@@ -1,16 +1,24 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
+
+import { SongsService } from './search/songs.service';
+
 import { AppComponent } from './app.component';
+import { SearchComponent } from './search/search.component';
+import { SearchSongComponent } from './search/search-song/search-song.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule, FormsModule],
+      declarations: [AppComponent, SearchComponent, SearchSongComponent],
+      providers: [
+        {
+          provide: SongsService,
+          useFactory: () => new SongsService(null)
+        }
+      ]
     }).compileComponents();
   }));
 
@@ -18,18 +26,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'songs'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('songs');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('songs app is running!');
   });
 });

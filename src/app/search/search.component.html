@@ -1,0 +1,10 @@
+<form (ngSubmit)="searchSong(songTitle)" class="search__form">
+  <input
+    [(ngModel)]="songTitle"
+    type="text"
+    name="songTitle"
+    class="search__input"
+  />
+</form>
+
+<app-search-song></app-search-song>
